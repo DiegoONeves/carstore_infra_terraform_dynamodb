@@ -14,18 +14,12 @@ provider "aws" {
 
 
 resource "aws_dynamodb_table" "basic-dynamodb-table" {
-  name         = "controledepeso"
+  name         = "cars"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "id"
-  range_key    = "data_pesagem"
 
   attribute {
     name = "id"
-    type = "S"
-  }
-
-  attribute {
-    name = "data_pesagem"
     type = "S"
   }
 
