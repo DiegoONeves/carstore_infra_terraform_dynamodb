@@ -23,6 +23,11 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
     type = "S"
   }
 
+  ttl {
+    attribute_name = "expiration_time"
+    enabled        = true
+  }
+
   tags = {
     Projeto     = "Estudo AWS Developer"
     Environment = "dev"
